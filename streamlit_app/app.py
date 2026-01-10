@@ -9,7 +9,7 @@ SCALE_MAPPING = {
     "Muy satisfecho/a": 5
 }
 
-API_URL = st.secrets["SUPABASE_SERVICE_KEY"]
+API_URL = st.secrets["API_URL"]
 
 st.set_page_config(page_title="Encuesta de Satisfacción", page_icon="📋")
 st.title("📋 Encuesta de Satisfacción")
