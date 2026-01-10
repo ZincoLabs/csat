@@ -11,15 +11,17 @@ SCALE_MAPPING = {
 
 
 st.set_page_config(page_title="Encuesta de Satisfacción", page_icon="📋")
-st.title("📋 Encuesta de Satisfacción")
+st.title("Encuesta de Satisfacción ZincoLabs")
+st.subtitle("Tu opinión es muy importante para nosotros. Esta encuesta es anónima y no te llevará más de 2 minutos.")
 
 with st.form("encuesta"):
 
-    q1 = st.radio("1. ¿Cómo valorarías tu experiencia general?", SCALE_MAPPING.keys())
-    q2 = st.radio("2. ¿Cómo valorarías la calidad del servicio?", SCALE_MAPPING.keys())
-    q3 = st.radio("3. ¿Cómo valorarías la atención recibida?", SCALE_MAPPING.keys())
+    q1 = st.radio("1. ¿Cómo valorarías tu experiencia general con el servicio de ZincoLabs?", SCALE_MAPPING.keys())
+    q2 = st.radio("2. ¿Cómo valorarías la calidad del producto que has recibido?", SCALE_MAPPING.keys())
+    q3 = st.radio("3. ¿Cómo valorarías la atención recibida y la comunicación con el equipo?", SCALE_MAPPING.keys())
     q4 = st.radio("4. ¿El servicio cumplió tus expectativas?", SCALE_MAPPING.keys())
 
+    improvement = st.text_area("¿En qué aspectos crees que podemos mejorar y cómo? (opcional)")
     comentarios = st.text_area("Comentarios adicionales (opcional)")
 
     if st.form_submit_button("Enviar"):
