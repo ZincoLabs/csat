@@ -12,7 +12,7 @@ SCALE_MAPPING = {
 
 st.set_page_config(page_title="Encuesta de Satisfacción", page_icon="📋")
 st.title("Encuesta de Satisfacción ZincoLabs")
-st.subtitle("Tu opinión es muy importante para nosotros. Esta encuesta es anónima y no te llevará más de 2 minutos.")
+st.subheader("Tu opinión es muy importante para nosotros. Esta encuesta es anónima y no te llevará más de 2 minutos.")
 
 with st.form("encuesta"):
 
