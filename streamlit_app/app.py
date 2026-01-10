@@ -34,7 +34,7 @@ with st.form("encuesta"):
             "comentarios": comentarios
         }
 
-        r = requests.post(f"{API_URL}/submit-survey", json=payload)
+        r = requests.post(f"submit-survey", json=payload)
 
         if r.status_code == 200:
             st.success("✅ Gracias por tu respuesta")
