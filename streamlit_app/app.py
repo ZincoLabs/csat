@@ -22,8 +22,15 @@ with st.form("encuesta"):
     q3 = st.radio("3. ¿Cómo valorarías la atención recibida y la comunicación con el equipo?", SCALE_MAPPING.keys())
     q4 = st.radio("4. ¿El servicio cumplió tus expectativas?", SCALE_MAPPING.keys())
 
+    nps = st.slider(
+    "5. ¿Qué probabilidad hay de que recomiendes nuestro servicio a un amigo o familiar?",
+    min_value=0,
+    max_value=10,
+    value=8
+)
     improvement = st.text_area("¿En qué aspectos crees que podemos mejorar y cómo? (opcional)")
     comentarios = st.text_area("Comentarios adicionales (opcional)")
+    
 
     if st.form_submit_button("Enviar"):
         payload = {
@@ -31,6 +38,8 @@ with st.form("encuesta"):
             "q2": SCALE_MAPPING[q2],
             "q3": SCALE_MAPPING[q3],
             "q4": SCALE_MAPPING[q4],
+            "nps": nps,
+            "improvement": improvement
             "comentarios": comentarios
         }
 
