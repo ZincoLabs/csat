@@ -40,7 +40,7 @@ with st.form("encuesta"):
             "q4": SCALE_MAPPING[q4],
             "nps": nps,
             "improvement": improvement
-            "comentarios": comentarios
+            "comentarios": comment
         }
 
         r = requests.post(f"submit-survey", json=payload)
