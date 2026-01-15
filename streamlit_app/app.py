@@ -29,7 +29,7 @@ with st.form("encuesta"):
     value=8
 )
     improvement = st.text_area("¿En qué aspectos crees que podemos mejorar y cómo? (opcional)")
-    comentarios = st.text_area("Comentarios adicionales (opcional)")
+    comment = st.text_area("Comentarios adicionales (opcional)")
     
 
     if st.form_submit_button("Enviar"):
@@ -40,7 +40,7 @@ with st.form("encuesta"):
             "q4": SCALE_MAPPING[q4],
             "nps": nps,
             "improvement": improvement
-            "comentarios": comment
+            "comment": comment
         }
 
         r = requests.post(f"submit-survey", json=payload)
