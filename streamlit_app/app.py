@@ -39,7 +39,7 @@ with st.form("encuesta"):
             "q3": SCALE_MAPPING[q3],
             "q4": SCALE_MAPPING[q4],
             "nps": nps,
-            "improvement": improvement
+            "improvement": improvement,
             "comment": comment
         }
 
