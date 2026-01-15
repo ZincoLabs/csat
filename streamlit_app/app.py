@@ -61,7 +61,7 @@ with st.form("encuesta"):
         value=8
     )
 
-    improvement = st.text_area(
+    improvements = st.text_area(
         "¿En qué aspectos crees que podemos mejorar y cómo? (opcional)"
     )
 
@@ -81,7 +81,7 @@ if submitted:
         "comunication": SCALE_MAPPING[comunication],
         "expectations": SCALE_MAPPING[expectations],
         "nps": nps,
-        "improvement": improvement,
+        "improvements": improvements,
         "comment": comment
     }
 
