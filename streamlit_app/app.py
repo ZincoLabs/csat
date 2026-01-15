@@ -15,11 +15,11 @@ SUPABASE_SERVICE_KEY = st.secrets["SUPABASE_SERVICE_KEY"]
 supabase = create_client(SUPABASE_URL, SUPABASE_SERVICE_KEY)
 
 SCALE_MAPPING = {
-    "Muy insatisfecho/a": 1,
-    "Insatisfecho/a": 2,
-    "Neutral": 3,
+    "Muy satisfecho/a": 5,
     "Satisfecho/a": 4,
-    "Muy satisfecho/a": 5
+    "Neutral": 3,
+    "Insatisfecho/a": 2,
+    "Muy insatisfecho/a": 1
 }
 
 # -------------------------------
@@ -36,7 +36,7 @@ st.subheader(
 
 with st.form("encuesta"):
 
-    name = st.text_area("¿Cuál es el nombre de tu empresa?")
+    name = st.text_line("¿Cuál es el nombre de tu empresa?")
 
     csat = st.radio(
         "1. ¿Cómo valorarías tu experiencia general con el servicio de ZincoLabs?",
