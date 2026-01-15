@@ -90,7 +90,7 @@ if submitted:
     }
 
     try:
-        supabase.table("encuesta_satisfaccion").insert(data).execute()
+        supabase.table("satisfaction").insert(data).execute()
         st.success("✅ Gracias por tu respuesta")
 
     except Exception:
