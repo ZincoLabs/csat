@@ -5,10 +5,6 @@ from supabase import create_client
 # Configuración segura
 # -------------------------------
 
-if "SUPABASE_URL" not in st.secrets or "SUPABASE_SERVICE_KEY" not in st.secrets:
-    st.error("❌ Faltan las credenciales de Supabase en los secretos de Streamlit")
-    st.stop()
-
 SUPABASE_URL = st.secrets["SUPABASE_URL"]
 SUPABASE_SERVICE_KEY = st.secrets["SUPABASE_SERVICE_KEY"]
 
@@ -59,7 +55,7 @@ with st.form("encuesta"):
     )
 
     nps = st.slider(
-        "5. ¿Qué probabilidad hay de que recomiendes nuestro servicio a un amigo o familiar?",
+        "5. ¿Qué probabilidad hay de que recomiendes ZincoLabs a un amigo o familiar?",
         min_value=0,
         max_value=10,
         value=8
