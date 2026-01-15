@@ -89,9 +89,9 @@ if submitted:
         supabase.table("satisfaction").insert(data).execute()
         st.success("✅ Gracias por tu respuesta")
 
-except Exception as e:
-    st.error("❌ Error guardando la encuesta")
-    st.code(str(e))
+    except Exception as e:
+        st.error("❌ Error guardando la encuesta")
+        st.code(str(e))
 
 
 
