@@ -86,8 +86,8 @@ if submitted:
     }
 
     try:
-    supabase.table("satisfaction").insert(data).execute()
-    st.success("✅ Gracias por tu respuesta")
+        supabase.table("satisfaction").insert(data).execute()
+        st.success("✅ Gracias por tu respuesta")
 
 except Exception as e:
     st.error("❌ Error guardando la encuesta")
