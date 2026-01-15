@@ -36,7 +36,7 @@ st.subheader(
 
 with st.form("encuesta"):
 
-    name = st.text_line("¿Cuál es el nombre de tu empresa?")
+    name = st.text_input("¿Cuál es el nombre de tu empresa?")
 
     csat = st.radio(
         "1. ¿Cómo valorarías tu experiencia general con el servicio de ZincoLabs?",
