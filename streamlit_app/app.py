@@ -80,10 +80,10 @@ with st.form("encuesta"):
 if submitted:
     data = {
         "name": name,
-        "csat": SCALE_MAPPING[q1],
-        "quality": SCALE_MAPPING[q2],
-        "comunication": SCALE_MAPPING[q3],
-        "expectations": SCALE_MAPPING[q4],
+        "csat": SCALE_MAPPING[csat],
+        "quality": SCALE_MAPPING[quality],
+        "comunication": SCALE_MAPPING[comunication],
+        "expectations": SCALE_MAPPING[expectations],
         "nps": nps,
         "improvement": improvement,
         "comment": comment
