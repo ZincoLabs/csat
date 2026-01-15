@@ -91,5 +91,6 @@ if submitted:
 
     except Exception:
         st.error("❌ Error guardando la encuesta. Inténtalo más tarde.")
+        st.code(str(e))
 
 
