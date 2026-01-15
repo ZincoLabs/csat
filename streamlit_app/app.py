@@ -36,7 +36,7 @@ st.subheader(
 
 with st.form("encuesta"):
 
-    client = st.text_area("¿Cuál es el nombre de tu empresa?")
+    name = st.text_area("¿Cuál es el nombre de tu empresa?")
 
     q1 = st.radio(
         "1. ¿Cómo valorarías tu experiencia general con el servicio de ZincoLabs?",
@@ -79,7 +79,7 @@ with st.form("encuesta"):
 
 if submitted:
     data = {
-        "client": client,
+        "name": name,
         "q1": SCALE_MAPPING[q1],
         "q2": SCALE_MAPPING[q2],
         "q3": SCALE_MAPPING[q3],
