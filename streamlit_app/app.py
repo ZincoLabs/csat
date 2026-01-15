@@ -38,22 +38,22 @@ with st.form("encuesta"):
 
     name = st.text_area("¿Cuál es el nombre de tu empresa?")
 
-    q1 = st.radio(
+    csat = st.radio(
         "1. ¿Cómo valorarías tu experiencia general con el servicio de ZincoLabs?",
         SCALE_MAPPING.keys()
     )
 
-    q2 = st.radio(
+    quality = st.radio(
         "2. ¿Cómo valorarías la calidad del producto que has recibido?",
         SCALE_MAPPING.keys()
     )
 
-    q3 = st.radio(
+    comunication = st.radio(
         "3. ¿Cómo valorarías la atención recibida y la comunicación con el equipo?",
         SCALE_MAPPING.keys()
     )
 
-    q4 = st.radio(
+    expectations = st.radio(
         "4. ¿El servicio cumplió tus expectativas?",
         SCALE_MAPPING.keys()
     )
@@ -80,10 +80,10 @@ with st.form("encuesta"):
 if submitted:
     data = {
         "name": name,
-        "q1": SCALE_MAPPING[q1],
-        "q2": SCALE_MAPPING[q2],
-        "q3": SCALE_MAPPING[q3],
-        "q4": SCALE_MAPPING[q4],
+        "csat": SCALE_MAPPING[q1],
+        "quality": SCALE_MAPPING[q2],
+        "comunication": SCALE_MAPPING[q3],
+        "expectations": SCALE_MAPPING[q4],
         "nps": nps,
         "improvement": improvement,
         "comment": comment
